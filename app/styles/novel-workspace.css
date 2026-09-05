@@ -1,0 +1,16 @@
+.novel-workspace [data-slot='input'],
+.novel-workspace [data-slot='textarea'],
+.novel-workspace [data-slot='select-trigger'],
+.novel-workspace [data-slot='input-group-control'],
+.novel-form-modal [data-slot='input'],
+.novel-form-modal [data-slot='textarea'],
+.novel-form-modal [data-slot='select-trigger'],
+.novel-form-modal [data-slot='input-group-control'] {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.novel-workspace [data-slot='label'],
+.novel-form-modal [data-slot='label'] {
+  font-size: 0.8125rem;
+}

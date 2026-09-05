@@ -1,0 +1,80 @@
+/* Accent color overrides — map settings accents onto HeroUI --accent */
+
+/* Default / gray */
+html[data-theme-color='neutral'] {
+  --accent: oklch(0.35 0.01 286);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html.dark[data-theme-color='neutral'],
+html[data-theme='dark'][data-theme-color='neutral'] {
+  --accent: oklch(0.78 0.01 286);
+  --accent-foreground: oklch(0.21 0.01 286);
+  --focus: var(--accent);
+}
+
+html[data-theme-color='blue'] {
+  --accent: oklch(0.546 0.245 262.881);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html.dark[data-theme-color='blue'],
+html[data-theme='dark'][data-theme-color='blue'] {
+  --accent: oklch(0.623 0.214 259.815);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html[data-theme-color='green'] {
+  --accent: oklch(0.527 0.154 150.069);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html.dark[data-theme-color='green'],
+html[data-theme='dark'][data-theme-color='green'] {
+  --accent: oklch(0.596 0.145 163.225);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html[data-theme-color='violet'] {
+  --accent: oklch(0.541 0.281 293.009);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html.dark[data-theme-color='violet'],
+html[data-theme='dark'][data-theme-color='violet'] {
+  --accent: oklch(0.606 0.25 292.717);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html[data-theme-color='orange'] {
+  --accent: oklch(0.646 0.222 41.116);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html.dark[data-theme-color='orange'],
+html[data-theme='dark'][data-theme-color='orange'] {
+  --accent: oklch(0.705 0.213 47.604);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html[data-theme-color='rose'] {
+  --accent: oklch(0.586 0.253 17.585);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}
+
+html.dark[data-theme-color='rose'],
+html[data-theme='dark'][data-theme-color='rose'] {
+  --accent: oklch(0.645 0.246 16.439);
+  --accent-foreground: oklch(0.985 0 0);
+  --focus: var(--accent);
+}

@@ -1,0 +1,35 @@
+:root {
+  --noveel-mac-titlebar-height: 38px;
+  --noveel-mac-titlebar-inset-left: 72px;
+}
+
+.app-drag-region {
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+
+.app-no-drag {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}
+
+.noveel-mac-titlebar {
+  box-sizing: border-box;
+  height: var(--noveel-mac-titlebar-height);
+  min-height: var(--noveel-mac-titlebar-height);
+  max-height: var(--noveel-mac-titlebar-height);
+}
+
+.noveel-mac-titlebar-inset-left {
+  padding-left: var(--noveel-mac-titlebar-inset-left);
+}
+
+.noveel-workspace-nav-item.is-active {
+  background-color: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+  font-weight: 500;
+}
+
+.noveel-workspace-nav-item.is-active svg {
+  color: var(--accent-soft-foreground);
+}

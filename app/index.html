@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noveel</title>
+    <script>
+      ;(function () {
+        try {
+          var mode = localStorage.getItem('noveel-color-mode') || 'system'
+          var stored = localStorage.getItem('noveel-theme-store')
+          var accent = 'neutral'
+          if (stored) {
+            var parsed = JSON.parse(stored)
+            if (parsed && parsed.state && parsed.state.accentColor) {
+              accent = parsed.state.accentColor
+            }
+          }
+          document.documentElement.dataset.themeColor = accent
+          var dark =
+            mode === 'dark' ||
+            (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          if (dark) document.documentElement.classList.add('dark')
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./renderer.tsx"></script>
+  </body>
+</html>

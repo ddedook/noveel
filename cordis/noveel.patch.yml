@@ -1,0 +1,14 @@
+# Noveel Cordis profile — extends DSH web with noveel host plugins
+
+- id: web-runtime
+  config:
+    openBrowser: false
+    printUrl: false
+
+- insert:
+    - id: noveel-plugin-host
+      name: '@noveel/plugin-host'
+
+- insert:
+    - id: cursor-subscription
+      name: '@noveel/cursor-subscription'

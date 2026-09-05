@@ -1,0 +1,23 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "compilerOptions": {
+    "composite": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/lib/*": ["./lib/*"],
+      "@deepseek-ai/*": ["./vendor/node_modules/@deepseek-ai/*"]
+    },
+    "types": ["node"]
+  },
+  "include": [
+    "electron.vite.config.ts",
+    "lib/main/**/*",
+    "lib/ipc/**/*",
+    "lib/preload/**/*",
+    "lib/types/**/*.d.ts"
+  ],
+  "exclude": ["lib/**/*.test.ts"]
+}

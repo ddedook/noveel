@@ -1,0 +1,65 @@
+.noveelShell {
+  transition-property: grid-template-columns;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.noveelShell[data-dragging] {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .noveelShell {
+    transition: none;
+  }
+
+  .assistant-chat-panel {
+    transition: none;
+  }
+}
+
+.noveel-resize-handle {
+  transition: background-color 120ms ease;
+}
+
+.noveel-resize-handle:hover,
+.noveel-resize-handle[data-active] {
+  background-color: color-mix(in oklch, var(--border) 60%, transparent);
+}
+
+.noveel-sidebar-surface {
+  min-width: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+  background: var(--background-secondary);
+}
+
+.noveel-chat-surface {
+  min-width: 0;
+  overflow: hidden;
+  border-left: 1px solid var(--border);
+  background: var(--background);
+}
+
+.noveel-chat-surface[data-collapsed] {
+  border-left: none;
+}
+
+.assistant-chat-panel {
+  transition: opacity 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.noveel-chat-surface[data-collapsed] .assistant-chat-panel {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.assistant-chat-panel,
+.noveel-chat-surface {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.noveel-workspace-nav {
+  border-right: 1px solid var(--border);
+}

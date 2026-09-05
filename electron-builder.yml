@@ -1,0 +1,10 @@
+{
+  "appId": "com.noveel.app",
+  "productName": "Noveel",
+  "electronVersion": "40.10.6",
+  "directories": { "output": "dist-electron" },
+  "files": ["out/**/*", "templates/**/*", "references/**/*", "cordis/**/*", "vendor/**/*"],
+  "mac": { "target": ["dir"] },
+  "win": { "target": ["dir"] },
+  "linux": { "target": ["dir"] }
+}

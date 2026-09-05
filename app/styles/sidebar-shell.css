@@ -1,0 +1,501 @@
+.noveel-sidebar-root {
+  --dsh-sidebar-inline-padding: 12px;
+  height: 100%;
+  padding: 6px var(--dsh-sidebar-inline-padding);
+  box-sizing: border-box;
+  background: var(--background-secondary);
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.noveel-sidebar-titlebar-spacer {
+  flex-shrink: 0;
+  height: var(--noveel-mac-titlebar-height, 38px);
+  min-height: var(--noveel-mac-titlebar-height, 38px);
+  margin: -6px calc(-1 * var(--dsh-sidebar-inline-padding)) 0;
+  width: calc(100% + 2 * var(--dsh-sidebar-inline-padding));
+}
+
+.noveel-sidebar-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 36px;
+  margin-bottom: 8px;
+}
+
+.noveel-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.noveel-sidebar-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-sidebar-icon-btn:hover {
+  background: var(--surface-hover);
+  color: var(--foreground);
+}
+
+.noveel-sidebar-icon-btn:active {
+  transform: scale(0.96);
+}
+
+.noveel-sidebar-icon-btn.size-28 {
+  width: 28px;
+  height: 28px;
+}
+
+.noveel-sidebar-icon-btn.size-36 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.noveel-sidebar-new-session {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--surface);
+  box-shadow: none;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-sidebar-new-session:hover:not(:disabled) {
+  background: var(--surface-hover);
+}
+
+.noveel-sidebar-new-session:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.noveel-sidebar-new-session:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.noveelShell[data-sidebar-collapsed] .noveel-sidebar-new-session {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.noveelShell[data-sidebar-collapsed] .noveel-sidebar-new-session span {
+  display: none;
+}
+
+.noveel-sidebar-scroll:has(.noveel-sidebar-empty-novel) {
+  display: flex;
+  flex-direction: column;
+}
+
+.noveel-sidebar-empty-novel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 16px 0;
+}
+
+.noveel-sidebar-create-novel-empty {
+  width: auto;
+  min-width: 120px;
+  padding-inline: 16px;
+  margin-bottom: 0;
+}
+
+.noveelShell[data-sidebar-collapsed] .noveel-sidebar-create-novel-empty {
+  width: 36px;
+  min-width: 36px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.noveelShell[data-sidebar-collapsed] .noveel-sidebar-create-novel-empty span {
+  display: none;
+}
+
+.noveel-sidebar-region {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.noveel-sidebar-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  padding-bottom: 8px;
+}
+
+.noveel-sidebar-scroll-fade {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, var(--background-secondary));
+}
+
+.noveel-sidebar-foot {
+  flex: none;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.noveel-sidebar-novel-header {
+  min-width: 0;
+}
+
+.noveel-sidebar-novel-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 0 28px 0 8px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-sidebar-novel-row:active {
+  transform: scale(0.96);
+}
+
+.noveel-sidebar-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 28px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-sidebar-chevron:hover {
+  background: var(--surface-hover);
+  color: var(--muted);
+}
+
+.noveel-sidebar-chevron:active {
+  transform: scale(0.96);
+}
+
+.noveel-sidebar-tree-children {
+  margin-left: 10px;
+  border-left: 1px solid var(--border);
+  padding-left: 4px;
+}
+
+.noveel-sidebar-tree-empty {
+  padding: 4px 8px 4px 24px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.noveel-sidebar-novel-row:hover {
+  background: var(--surface-hover);
+}
+
+.group\/novel:hover .noveel-sidebar-novel-row,
+.group\/novel:focus-within .noveel-sidebar-novel-row {
+  background: var(--surface-hover);
+}
+
+.noveel-sidebar-novel-delete {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  z-index: 1;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.group\/novel:hover .noveel-sidebar-novel-delete,
+.group\/novel:focus-within .noveel-sidebar-novel-delete {
+  opacity: 1;
+}
+
+.noveel-sidebar-novel-delete:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.noveel-sidebar-session-row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 28px 0 24px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-sidebar-session-time {
+  transition: opacity 120ms ease;
+}
+
+.group\/session:hover .noveel-sidebar-session-time,
+.group\/session:focus-within .noveel-sidebar-session-time {
+  display: none;
+}
+
+.group\/session:hover .noveel-sidebar-session-row,
+.group\/session:focus-within .noveel-sidebar-session-row {
+  background: var(--surface-hover);
+  color: var(--foreground);
+}
+
+.group\/session:hover .noveel-sidebar-session-row.is-active,
+.group\/session:focus-within .noveel-sidebar-session-row.is-active {
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+}
+
+.noveel-sidebar-session-delete {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  z-index: 1;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.group\/session:hover .noveel-sidebar-session-delete,
+.group\/session:focus-within .noveel-sidebar-session-delete {
+  opacity: 1;
+}
+
+.noveel-sidebar-session-delete:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.noveel-sidebar-session-row:hover {
+  background: var(--surface-hover);
+  color: var(--foreground);
+}
+
+.noveel-sidebar-session-row.is-active {
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+  font-weight: 500;
+}
+
+.noveel-sidebar-session-row:active {
+  transform: scale(0.96);
+}
+
+.noveel-settings-trigger {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: calc(100% + 4px);
+  height: 42px;
+  color: var(--foreground);
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px -2px;
+  padding: 0 10px 0 8px;
+  font: inherit;
+  font-size: 14px;
+  overflow: hidden;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-settings-trigger:active {
+  transform: scale(0.96);
+}
+
+.noveel-settings-trigger:hover {
+  background: var(--surface-hover);
+}
+
+.noveel-settings-trigger.is-rail {
+  border-radius: 50%;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 8px 0 10px;
+  padding: 0;
+}
+
+.noveel-settings-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noveel-settings-mask {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklch, var(--foreground) 45%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.noveel-settings-panel {
+  position: relative;
+  z-index: 1;
+  width: 800px;
+  max-width: calc(100vw - 48px);
+  height: min(800px, 100vh - 48px);
+  background: var(--surface);
+  box-shadow: 0 16px 48px oklch(0 0 0 / 0.12);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.noveel-settings-nav {
+  border-right: 1px solid var(--border);
+  padding: 16px 8px;
+  overflow: auto;
+}
+
+.noveel-settings-nav-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.noveel-settings-nav-cell:active {
+  transform: scale(0.96);
+}
+
+.noveel-settings-nav-cell.is-active {
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+}
+
+.noveel-settings-nav-cell:hover {
+  background: var(--surface-hover);
+  color: var(--foreground);
+}
+
+.noveel-settings-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.noveel-settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.noveel-settings-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.noveel-settings-alert-layer {
+  z-index: 1100 !important;
+}
+
+.noveel-sidebar-quick-action:hover:not(:disabled) {
+  background: var(--surface-hover);
+}
+
+.noveel-sidebar-quick-action:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.noveel-sidebar-section-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 0 8px 4px;
+}
+
+.assistant-chat-panel .aui-md pre {
+  overflow-x: auto;
+  border-radius: 8px;
+  background: var(--background);
+  padding: 8px 10px;
+}
+
+.noveel-chat-composer:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px color-mix(in oklch, var(--accent) 30%, transparent);
+}

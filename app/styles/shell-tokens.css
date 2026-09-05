@@ -1,0 +1,17 @@
+/* Shell layout tokens — HeroUI semantic colors (no DSW) */
+.noveelShell {
+  --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-duration-slow: 200ms;
+  --noveel-elevation-1: 0 1px 2px oklch(0 0 0 / 0.06);
+  --dsh-sidebar-inline-padding: 12px;
+  --dsh-scrollbar-thumb: var(--scrollbar);
+  --dsh-scrollbar-thumb-hover: color-mix(in oklch, var(--foreground) 25%, transparent);
+}
+
+.dark .noveelShell {
+  --noveel-elevation-1: 0 1px 2px oklch(0 0 0 / 0.2);
+}
+
+.noveel-sidebar-root {
+  --dsh-sidebar-inline-padding: 12px;
+}
